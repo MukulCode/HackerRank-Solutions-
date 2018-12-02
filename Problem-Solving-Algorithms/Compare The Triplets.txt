@@ -1,0 +1,37 @@
+Prblem Name: Compare The Triplets
+Difficulty: Easy
+
+
+
+
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+int main()
+{
+ int a[50],b[50],i,alice=0,bob=0;
+ for(i=0;i<3;i++)
+     scanf("%d",&a[i]);
+ for(i=0;i<3;i++)
+     scanf("%d",&b[i]);
+ for(i=0;i<3;i++)
+ {
+     if(a[i]<b[i])
+       bob++;
+     if(a[i]>b[i])
+       alice++;  
+ }   
+printf("%d %d",alice,bob);
+return 0;
+}
+    
