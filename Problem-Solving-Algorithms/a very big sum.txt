@@ -1,0 +1,47 @@
+Problem Name : A very Big Sum
+Difficulty: Easy
+/*|||||||||||||||||||||||||||||||||||       
+||     ||\      //||     ||   //   ||      
+||     ||\\    // ||     ||  //    || 
+||     || \\  //  ||     || //     || 
+||     ||  \\//   ||     ||//      || 
+||     ||         ||     ||\\      ||
+||     ||         ||     || \\     ||
+||     ||         ||     ||  \\    ||
+||     ||         ||     ||   \\   ||
+|||||||||||||||||||||||||||||||||||*/
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    long long int n,i,k,ar[100],suma=0;
+    scanf("%lli",&n);
+
+
+    for(int i=0;i<n;i++)
+{
+    scanf("%lli",&ar[i]);
+    suma = suma +ar[i];
+    
+}
+
+
+    printf("%lli",suma);
+    return 0;
+}
+
+
+
+
+
+
+
