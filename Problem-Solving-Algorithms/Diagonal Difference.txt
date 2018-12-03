@@ -1,0 +1,47 @@
+Problem Name: Diagonal difference
+Difficlty: Easy
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||         ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{   int sum1=0,sum2=0;
+    int j,i,n;
+    int m[100][100];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+       for(j=0;j<n;j++)
+           scanf("%d",&m[i][j]);
+        
+for(int i=0;i<n;i++)
+       for(int j=0;j<n;j++)
+       {
+           if(i==j)
+           sum1=sum1+m[i][j];
+           if(i+j==n-1)
+           sum2=sum2+m[i][j];
+       }
+    if(sum1>sum2)
+      printf("%d",sum1-sum2);
+    else
+      printf("%d",sum2-sum1);     
+    return 0;
+}
