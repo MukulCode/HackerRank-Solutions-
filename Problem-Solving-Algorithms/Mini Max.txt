@@ -1,0 +1,55 @@
+Problem Name : Mini-Max
+Problem Difficulty : Easy
+
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
+
+void swap(int *xp, int *yp) 
+{ 
+    int temp = *xp; 
+    *xp = *yp; 
+    *yp = temp; 
+} 
+int main()
+{    int i, j;
+long sum_max=0, sum_min=0,arr[5];
+for(j=0;j<5;j++)
+        scanf("%ld",&arr[j]);
+
+for (i = 0; i < 5; i++){         
+       for (j = 0; j < 5-i-1; j++){  
+           if (arr[j] > arr[j+1]) 
+              swap(&arr[j], &arr[j+1]); 
+} 
+}     
+for(i=0;i<4;i++)
+   sum_min+=arr[i];
+for(i=1;i<5;i++)
+    sum_max+=arr[i];
+
+printf("%ld",sum_min);
+printf(" ");
+printf("%ld",sum_max);
+
+return 0;
+}
