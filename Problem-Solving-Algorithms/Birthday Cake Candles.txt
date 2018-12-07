@@ -1,0 +1,46 @@
+Problem Name: Birthday Cake Candles
+Problem Difficulty: Easy
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the birthdayCakeCandles function below.
+int birthdayCakeCandles(vector<int> ar,int n) {
+    int max=0,count=0;
+    for(int i=0;i<n;i++)
+        if(max<ar[i]){max=ar[i];}
+    for(int i=0;i<n;i++)
+       if(max==ar[i])count++;
+
+return count;
+    
+
+
+}
+
+int main()
+{
+    int i,n,m;
+    cin>>n;
+    vector<int> arr;
+    for(i=0;i<n;i++){
+    cin>>m;
+    arr.push_back(m);
+    }
+ cout<<birthdayCakeCandles(arr,n);   
+    
+}
