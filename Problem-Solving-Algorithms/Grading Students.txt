@@ -1,0 +1,46 @@
+Problem Name: Grading Students
+Problem Difficulty: Easy
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+int a[500],n,i;
+scanf("%d",&n);
+
+//loop to enter the marks of student
+for(i=0;i<n;i++)
+   scanf("%d",&a[i]);
+
+for( i=0;i<n;i++){
+    if(a[i]>=38){
+    if(a[i]%5==3){a[i]+=2;}
+    if(a[i]%5==4){a[i]+=1;}
+    printf("%d",a[i]);
+   printf("\n");
+    }
+    if(a[i]<38){
+        printf("%d",a[i]);
+        printf("\n");
+    }
+}
+   return 0;
+}
+   
