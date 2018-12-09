@@ -1,0 +1,38 @@
+Problem Name: Kangaroo
+Problem Difficulty : Easy
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char** split_string(char*);
+
+
+int main()
+{
+    int v1,v2,x1,x2,m,p,q;
+    scanf("%d%d%d%d",&x1,&v1,&x2,&v2);
+    
+    if((v1>v2)&&((x1-x2)%(v1-v2)==0)) printf("YES");
+    else
+        printf("NO");
+
+        return 0;
+}
+
