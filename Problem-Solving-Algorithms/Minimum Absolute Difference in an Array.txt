@@ -1,0 +1,50 @@
+Problem Name : Minimum Absolute Difference in an Array
+Problem Difficulty : Easy
+
+
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+#include <bits/stdc++.h>
+#include<limits>
+#include<algorithm>
+using namespace std;
+
+vector<string> split_string(string);
+
+// Complete the minimumAbsoluteDifference function below.
+int minimumAbsoluteDifference(vector<int> arr) {
+        int m;
+        /* setting min_1 to infinity #include<limits> is used*/
+        int min_1 = std::numeric_limits<int>::max(); 
+        sort(arr.begin(),arr.end());
+        for(int j=0;j<arr.size()-1;j++){
+            m=abs(arr[j]-arr[j+1]);
+            if(m<min_1){min_1=m;}
+
+        }
+    
+return min_1;
+
+}
+
+int main()
+{
+    int n,temp;
+    cin>>n;
+    vector<int> min;
+    for(int i=0;i<n;i++){
+        cin>>temp;
+        min.push_back(temp);
+    }
+    cout<<minimumAbsoluteDifference(min);
+    return 0;
+}
+
