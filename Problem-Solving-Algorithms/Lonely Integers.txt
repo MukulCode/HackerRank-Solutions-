@@ -1,0 +1,41 @@
+Problem Name : Lonely Integer
+Problem difficulty : Easy
+/*||||||||||||||||||||||||||||||||||       
+||    ||\      //||     ||   //   ||      
+||    ||\\    // ||     ||  //    || 
+||    || \\  //  ||     || //     || 
+||    ||  \\//   ||     ||//      || 
+||    ||   \/    ||     ||\\      ||
+||    ||         ||     || \\     ||
+||    ||         ||     ||  \\    ||
+||    ||         ||     ||   \\   ||
+||||||||||||||||||||||||||||||||||*/
+
+
+#include <bits/stdc++.h>
+using namespace std;
+vector<string> split_string(string);
+
+// Complete the lonelyinteger function below.
+void lonelyinteger(vector<int> arr) {
+    vector<int> m;
+    for(int i=1;i<arr.size();i++){
+        arr[0]=arr[0]^arr[i];
+    }
+    cout<<arr[0];
+}
+
+int main()
+{
+    int n,temp;
+    vector<int> arr;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        cin>>temp;
+        arr.push_back(temp);
+    }
+    lonelyinteger(arr);
+   
+    return 0;
+}
+
