@@ -14,7 +14,7 @@ Getting Started ✔️
 Contribute ?? ✔️
 Fork the repository
 Make the commits
-Submit a pull request
+Submit a pull request.
 :octocat: If you find any better approach then make a pull request.I will surely merge it after a review.
 
 :octocat: You can also make a pull request if you solved the question with same approach as above but in programming language other than C++/C.
