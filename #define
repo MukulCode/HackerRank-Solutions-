@@ -42,3 +42,6 @@
 #define FILE_READ_IN freopen("input.txt","r",stdin);
 #define FILE_READ_OUT freopen("output.txt","w",stdout);
 #define MAXN 25
+
+
+//Now I don't think they are important
