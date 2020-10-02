@@ -1,4 +1,4 @@
-# HackerRank-Solutions-
+# HackerRank-Solutions
 Explanations of questions taken from HackerRank.com
 
 
