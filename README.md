@@ -12,7 +12,7 @@ Getting Started ✔️
 :octocat: Try out the questions on different outputs.
 
 
-Contribute ?? ✔️
+Contribute ??? ✔️
 Fork the repository
 Make the commits
 Submit a pull request.
