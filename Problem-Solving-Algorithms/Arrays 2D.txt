@@ -17,6 +17,8 @@ using namespace std;
 
 int main() {
     int arr[6][6],sum=0,max=INT_MIN;
+
+    //Taking Input form the user
     for (int i=0;i<6;i++){
         for(int j=0;j<6;j++){
             cin>>arr[i][j];
@@ -26,16 +28,20 @@ int main() {
     for (int i=0;i<5;i++){
         for(int j=0;j<5;j++){
             if(i!=0 && j!=0){
+
+                // Adding the elements from the 2D array that make up the hourglass
                 sum=arr[i-1][j-1]+arr[i-1][j]+arr[i-1][j+1]+arr[i][j]+arr[i+1][j-1]+arr[i+1][j]+arr[i+1][j+1];
                 
-                if(sum>max) max=sum;
+                if(sum>max){
+                    max=sum;
+                }
                 
             }
         }
     }
     
     
-    cout<<max;
+    cout<<max<<endl;
     
     return 0;
 }
